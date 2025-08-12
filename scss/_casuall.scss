@@ -144,9 +144,13 @@ body {
         border-radius: 0.5rem;
         border: 1px solid rgba(0, 0, 0, 0.10);
         background: #FFF;
-
+        transition: 0.2s;
+        cursor: pointer;
         & span::before {
             font-size: 0.9em;
+        }
+        &:hover{
+            background-color: #F0F0F0;
         }
     }
 

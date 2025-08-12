@@ -489,6 +489,7 @@ body {
 
     &__button {
         position: relative;
+        background-color: #FFF;
         flex: 0 1 33.333%;
         border: none;
         padding-bottom: 1.5rem;
@@ -558,6 +559,7 @@ body {
         right: 1.5rem;
         border: none;
         cursor: pointer;
+        background-color: #fff;
     }
 
     // .modal__title

@@ -406,7 +406,7 @@ textarea {
   text-align: center;
   gap: 0.75em;
   border-radius: 3.875rem;
-  background-color: #F0F0F0;
+  background-color: #fff;
 }
 .header__search-icon {
   border: none;
@@ -1475,6 +1475,7 @@ body.lock {
 }
 .tabs__button {
   position: relative;
+  background-color: #FFF;
   flex: 0 1 33.333%;
   border: none;
   padding-bottom: 1.5rem;
@@ -1536,6 +1537,7 @@ body.lock {
   right: 1.5rem;
   border: none;
   cursor: pointer;
+  background-color: #fff;
 }
 .modal__title {
   text-align: center;
@@ -2091,9 +2093,14 @@ body.lock {
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #FFF;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .casual__page-button span::before {
   font-size: 0.9em;
+}
+.casual__page-button:hover {
+  background-color: #F0F0F0;
 }
 .casual__page-button--previous span {
   margin-right: 0.5em;

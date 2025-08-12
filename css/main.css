@@ -2438,6 +2438,8 @@ body.lock {
   .casual__page-button p {
     display: none;
   }
+}
+@media (max-width: 330px) {
   .casual__item {
     flex: 0 1 47%;
   }

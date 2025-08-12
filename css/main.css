@@ -347,6 +347,7 @@ textarea {
 }
 
 .sign-up {
+  display: block;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -355,10 +356,43 @@ textarea {
   font-size: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
   font-weight: 400;
   line-height: 140%;
+  transition: all 0.2s;
+}
+.sign-up__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sign-up a {
   font-weight: 500;
   text-decoration: underline;
+}
+.sign-up__close {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  right: 0;
+  cursor: pointer;
+}
+.sign-up__close::before, .sign-up__close::after {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 2.2px;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  top: 50%;
+  left: 0;
+}
+.sign-up__close::before {
+  transform: rotate(-135deg);
+}
+.sign-up__close::after {
+  transform: rotate(135deg);
+}
+.sign-up.hidden {
+  display: none;
 }
 
 .burger {

@@ -1,5 +1,14 @@
 'use strict';
 
+// Sign Up close button
+const signupClose = document.querySelector('.sign-up__close');
+const signup = document.querySelector('.sign-up');
+if (signup) {
+   signupClose.addEventListener('click', function () {
+      signup.classList.toggle('hidden');
+   });
+}
+
 // Burger menu
 const burgerBtn = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.header__list');
@@ -162,7 +171,7 @@ if (reviewsBtn) {
 const openFilter = document.querySelector('.filter__open');
 const filter = document.querySelector('.filter');
 const closeFilter = document.querySelector('.filter__close');
-const overlayFilter  = document.querySelector('.overlay-filter');
+const overlayFilter = document.querySelector('.overlay-filter');
 if (filter) {
    openFilter.addEventListener('click', function () {
       document.body.classList.toggle('lock');
@@ -170,6 +179,8 @@ if (filter) {
       overlayFilter.classList.toggle('active');
       closeFilter.classList.toggle('active');
    });
+
+   closeFilter.addEventListener('click', removeActive);
+   overlayFilter.addEventListener('click', removeActive);
+
 }
-closeFilter.addEventListener('click', removeActive);
-overlayFilter.addEventListener('click', removeActive);

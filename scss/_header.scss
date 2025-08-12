@@ -1,4 +1,5 @@
 .sign-up {
+    display: block;
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -7,11 +8,44 @@
     font-size: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
     font-weight: 400;
     line-height: 140%;
-
+    transition: all 0.2s;
+    &__container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     & a {
         font-weight: 500;
         text-decoration: underline;
 
+    }
+    &__close {
+        position: absolute;
+        width: 1.25rem;
+        height: 1.25rem;
+        right: 0;
+        cursor: pointer;
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            width: 0.8rem;
+            height: 2.2px;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            top: 50%;
+            left: 0;
+        }
+        &::before{
+            transform: rotate(-135deg);
+        }
+        &::after{
+            transform: rotate(135deg);
+        }
+    }
+    &.hidden{
+        display: none;
     }
 }
 
@@ -121,11 +155,13 @@
 
     &__cart {
         position: relative;
+
         &::before {
             font-size: 1.5em;
             color: #000;
         }
-        & span{
+
+        & span {
             font-family: 'Intergral CF';
             position: absolute;
             background-color: #000000;
@@ -152,6 +188,7 @@
             color: #000;
         }
     }
+
     &__close {
         display: none;
     }
@@ -301,13 +338,16 @@
             background-color: #fff;
             border-radius: 1.25rem 1.25rem 0rem 0rem;
             gap: 2em;
+
             &.active {
                 left: 0;
             }
         }
-        &__link{
+
+        &__link {
             font-size: 1.2em;
         }
+
         &__close.active {
             display: block;
             position: absolute;
@@ -315,15 +355,18 @@
             right: 1.13rem;
         }
     }
+
     .dropdown {
         &__link {
             padding: 0.8rem 0;
         }
-        &__menu{
+
+        &__menu {
             display: flex;
             justify-content: center;
         }
-        &.active{
+
+        &.active {
             margin-top: 2rem;
         }
     }

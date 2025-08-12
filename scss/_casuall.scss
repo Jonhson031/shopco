@@ -1,0 +1,623 @@
+body {
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.overlay-filter {
+    display: none;
+    opacity: 0;
+    transition: all 0.2s;
+
+}
+
+.casual {
+    margin-top: 1.84em;
+    // .casual__container
+
+    &__container {
+        display: flex;
+        gap: 1.31em;
+        justify-content: space-between;
+    }
+
+    // .casual__top
+
+    &__top {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 0.75em;
+        margin-bottom: 1em;
+    }
+
+    // .casual__title
+
+    &__title {
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(1.5rem, 1.3261rem + 0.8696vw, 2rem);
+        font-weight: 700;
+    }
+
+    // .casual__info
+
+    &__info {
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-weight: 400;
+    }
+
+    // .casual__sort
+
+    &__sort {
+
+        position: relative;
+        border-radius: 3.875rem;
+        background: #F0F0F0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        & img {
+            transition: 0.2s;
+            z-index: 2;
+        }
+
+        &.active {
+            & img {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    // .casual__sort-list
+
+    &__sort-list {
+        appearance: none;
+        border: none;
+        // padding: 1em 0.1em;
+        font-family: Satoshi;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-weight: 500;
+        color: #000;
+
+        & span {
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+
+    // .casual__sort-item
+
+    &__sort-item {
+        font-family: inherit;
+    }
+
+    // .casual__sort-arrow
+
+    &__sort-arrow {
+
+        position: absolute;
+        right: -0.85em;
+    }
+
+    &__sort-filter {
+        display: none;
+    }
+
+    // .casual__list
+
+    &__list {
+        padding-bottom: 2em;
+    }
+
+    // .casual__item
+
+    &__item {
+        flex: 0 1 32%;
+    }
+
+    // .casual__page
+
+    &__page {
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+        padding-top: 1.25em;
+        margin-bottom: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .casual__page-button
+
+    &__page-button {
+        display: flex;
+        align-items: center;
+        padding: 0.6em 0.98em;
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+        font-weight: 500;
+        line-height: 142.857%;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background: #FFF;
+
+        & span::before {
+            font-size: 0.9em;
+        }
+    }
+
+    // .casual__page-button--previous
+
+    &__page-button--previous {
+        & span {
+            margin-right: 0.5em;
+        }
+    }
+
+    &__page-button--next {
+        & span {
+            margin-left: 0.5em;
+            transform: rotate(-180deg);
+        }
+    }
+
+    // .casual__page-counter
+
+    &__page-counter {
+        display: flex;
+        align-items: center;
+        gap: 0.12em;
+    }
+
+    // .casual__page-number
+
+    &__page-number {
+        color: rgba(0, 0, 0, 0.50);
+        text-align: center;
+        font-family: Satoshi;
+        font-size: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+        font-weight: 500;
+        line-height: 142.857%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .casual__page-number--active
+
+    &__page-number--active {
+        color: #000;
+    }
+
+    // .casual__page-pagination
+
+    &__page-pagination {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        width: 0.75em;
+        height: 0.9em;
+
+        & span {
+            display: block;
+            width: 3px;
+            height: 3px;
+            background-color: #999999;
+            border-radius: 50%;
+        }
+    }
+}
+
+.filter {
+    padding: 1.25em 1.5em;
+    flex: 0 0 23.790323%;
+    /* 295/1240 */
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    max-height: 76.25em;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5em;
+
+    }
+
+    &__title {
+        color: #000;
+        font-family: Satoshi;
+        font-size: 1.25em;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & span {
+            font-size: 0.45rem;
+            width: 1em;
+            height: 1em;
+            transform: rotate(180deg);
+            color: #000;
+            font-weight: 800;
+            cursor: pointer;
+        }
+    }
+
+    // .filter__casual-button
+
+    &__casual-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+
+    &__close {
+        display: none;
+    }
+
+    // .filter__clothing
+
+    &__clothing {
+        display: grid;
+        padding: 1.5em 0;
+        gap: 1.4em;
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.10);
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    }
+
+    // .filter__clothing-item
+
+    &__clothing-item {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: 1em;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & span {
+            font-size: 0.45em;
+            transform: rotate(-90deg);
+            width: 1em;
+            height: 1em;
+        }
+    }
+
+    // .filter__price
+
+    &__price {
+        padding: 1.5em 0;
+    }
+
+    // .filter__price-range
+
+    &__price-range {
+        cursor: pointer;
+        margin-top: 1.25em;
+        position: relative;
+        width: 97%;
+        height: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & span {
+            display: block;
+            height: 6px;
+            width: 95%;
+            background-color: #000;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 1.25rem;
+            background: #000;
+            width: 1.25rem;
+            height: 1.25rem;
+            right: 0;
+        }
+
+        &::after {
+            left: 0;
+        }
+    }
+
+    // .filter__price-range--cost
+
+    &__price-range--cost {
+        margin-top: 0.25em;
+        display: flex;
+        justify-content: space-between;
+        color: #000;
+        font-family: Satoshi;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    // .filter__colors
+
+    &__colors {
+        padding: 1.5em 0;
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    }
+
+    // .filter__colors-list
+
+    &__colors-list {
+        display: grid;
+        margin-top: 1.25em;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+
+        & li:nth-child(1) {
+            background-color: #00C12B;
+            border-color: #009A22;
+        }
+
+        & li:nth-child(2) {
+            background-color: #F50606;
+            border-color: #D13A3A;
+        }
+
+        & li:nth-child(3) {
+            background-color: #F5DD06;
+            border-color: #C4B105;
+        }
+
+        & li:nth-child(4) {
+            background-color: #F57906;
+            border-color: #C46105;
+        }
+
+        & li:nth-child(5) {
+            background-color: #06CAF5;
+            border-color: #0593B2;
+        }
+
+        & li:nth-child(6) {
+            background-color: #063AF5;
+            border-color: #3153CE;
+        }
+
+        & li:nth-child(7) {
+            background-color: #7D06F5;
+            border-color: #6405C4;
+        }
+
+        & li:nth-child(8) {
+            background-color: #F506A4;
+            border-color: #C40583;
+        }
+
+        & li:nth-child(9) {
+            background-color: #FFFFFF;
+            border-color: #CCCCCC;
+        }
+
+        & li:nth-child(10) {
+            background-color: #000;
+            border-color: #000;
+        }
+    }
+
+    // .filter__colors-item
+
+    &__colors-item {
+        cursor: pointer;
+        width: 2.3125rem;
+        height: 2.3125rem;
+        border-radius: 50%;
+        border: 0.13rem solid #fff;
+    }
+
+    // .filter__size
+
+    &__size {
+        padding: 1.5em 0;
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    }
+
+    // .filter__size-list
+
+    &__size-list {
+        margin-top: 1.25em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        max-width: 13em;
+    }
+
+    // .filter__size-item
+
+    &__size-item {
+        cursor: pointer;
+        padding: 0.9em 1.45em;
+        box-sizing: border-box;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: 0.875rem;
+        font-weight: 400;
+
+        &.active {
+            background-color: #000;
+            border-radius: 3.875rem;
+            background: #000;
+            color: #fff;
+        }
+    }
+
+
+    // .filter__dress
+
+    &__dress {
+        padding: 1.5em 0;
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    }
+
+    // .filter__dress-list
+
+    &__dress-list {
+        display: grid;
+        gap: 1.55em;
+        margin-top: 1.4em;
+    }
+
+    // .filter__dress-item
+
+    &__dress-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: 1rem;
+        font-weight: 400;
+
+        & span {
+            font-size: 0.45em;
+            width: 1em;
+            height: 1em;
+            transform: rotate(-90deg);
+            cursor: pointer;
+        }
+    }
+
+    // .filter__button-black
+
+    &__button-black {
+        cursor: pointer;
+        display: flex;
+        height: 3.5em;
+        padding: 1rem 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-family: Satoshi;
+        font-size: 0.875rem;
+        font-weight: 500;
+        background-color: #000;
+        border-radius: 3.875rem;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1023px) {
+    .overlay-filter {
+        display: block;
+
+        &.active {
+            position: absolute;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            z-index: 4;
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+    }
+    .filter {
+        position: fixed;
+      
+        top: 6rem;
+        left: -200%;
+        right: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+    
+        padding-top: 1.6em;
+        transition: 0.3s;
+        background-color: #fff;
+        
+        border: none;
+        overflow-y: auto;
+        border-radius: 1.25rem 1.25rem 0rem 0rem;
+        gap: 2em;
+
+        &.active {
+            left: 0;
+        }
+
+        &__close {
+            display: block;
+
+            border: none;
+            cursor: pointer;
+        }
+
+        &__casual-button {
+            display: none;
+        }
+    }
+
+    .casual {
+
+        &__sort {
+            display: none;
+        }
+
+        &__sort-filter {
+            display: initial;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .casual {
+
+        &__item {
+            flex: 0 1 48%;
+            max-width: 10.75em;
+        }
+
+        &__page-counter {
+
+            & li:nth-child(3),
+            & li:nth-child(5) {
+                display: none;
+            }
+        }
+
+        &__list {
+            & li:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .casual {
+
+        &__page-button {
+            & p {
+                display: none;
+            }
+        }
+
+        &__item {
+            flex: 0 1 47%;
+        }
+    }
+}

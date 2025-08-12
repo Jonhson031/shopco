@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Shop.co</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper cart-page">
+        <div class="overlay"></div>
+        <header class="header">
+            <p class="sign-up">Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+            <div class="header__container">
+                <div class="header__burger burger"><span></span></div>
+                <a href="index.html" class="header__logo logo">SHOP.CO</a>
+                <nav class="header__navigation">
+                    <ul class="header__list">
+                        <li class="header__dropdown-menu dropdown__menu">
+                            <a href="#" class="header__link header__dropdown-open dropdown__open">
+                                Shop
+                                <img class="header__link-arrow" src="images/icons/arrow-down.svg" alt="arrow-down">
+                            </a>
+                            <div class="header__dropdown dropdown">
+                                <a href="#" class="header__link header__dropdown-link dropdown__link">Men</a>
+                                <a href="#" class="header__link header__dropdown-link dropdown__link">Women</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="header__link">On Sale</a></li>
+                        <li><a href="#" class="header__link">New Arrivals</a></li>
+                        <li><a href="#" class="header__link">Brands</a></li>
+                        <div class="header__close">
+                            <img src="images/icons/close.svg" alt="close button">
+                        </div>
+                    </ul>
+                    <form action="submit" class="header__search" id="header__search">
+                        <button class="header__search-icon icon-search1"></button>
+                        <input class="header__search-input" placeholder="Search for products..."
+                            name="header__search-input" id="header__search-input" required></input>
+                    </form>
+                    <div class="header__buttons">
+                        <a href="cart.html" class="header__cart icon-cart">
+                            <span class="cart__btn-counter hidden">1</span>
+                        </a>
+                        <a href="#" class="header__user icon-user"></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <nav class="navigation">
+            <div class="navigation__container">
+                <a href="index.html" class="navigation__link">
+                    Home
+                    <span class="icon-arrow-down"></span>
+                </a>
+                <a href="#" class="navigation__link navigation__link-active">
+                    Cart
+                    <span class="icon-arrow-down"></span>
+                </a>
+                </a>
+            </div>
+        </nav>
+        <main class="page">
+            <section class="cart">
+                <div class="cart__container">
+                    <h1 class="cart__title">YOUR CART</h1>
+                    <div class="cart__content">
+                        <ul class="cart__list">
+                            <li class="cart__item">
+                                <a href="#" class="cart__item-image">
+                                    <img src="images/items/suggestion/01.jpg" alt="image of t-shirt">
+                                </a>
+                                <div class="cart__item-info">
+                                    <h2 class="cart__item-title">Gradient Graphic T-shirt</h2>
+                                    <div class="cart__item-size">
+                                        Size: <span>Large</span>
+                                    </div>
+                                    <div class="cart__item-color">
+                                        Color: <span>White</span>
+                                    </div>
+                                    <div class="cart__item-price">$145</div>
+                                </div>
+                                <div class="cart__item-remove">
+                                    <span class="icon-garbage"></span>
+                                </div>
+                                <div class="cart__item-quantity product__cart-quantity">
+                                    <div class="cart__item-substract product__cart-substract"></div>
+                                    <div class="cart__item-total product__cart-total">1</div>
+                                    <div class="cart__item-add product__cart-add"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="cart__summary">
+                            <h2 class="cart__summary-title">Order Summary</h2>
+                            <div class="cart__summary-subtotal cart__summary-item">
+                                <span>Subtotal</span>
+                                <span class="cart__summary-price">$565</span>
+                            </div>
+                            <div class="cart__summary-discount cart__summary-item">
+                                <span>Discount (-20%)</span>
+                                <span class="cart__summary-price cart__summary-price--discount">$-113</span>
+                            </div>
+                            <div class="cart__summary-delivery cart__summary-item">
+                                <span>Delivery Fee</span>
+                                <span class="cart__summary-price">$15</span>
+                            </div>
+                            <div class="cart__summary-total cart__summary-item">
+                                <span>Total</span>
+                                <span class="cart__summary-price">$467</span>
+                            </div>
+                            <div class="cart__promocode">
+                                <div class="cart__promocode-input">
+                                    <label for="promocode">
+                                        <span class="icon-discount"></span>
+                                    </label>
+                                    <input id="promocode" name="promocode" type="text" placeholder="Add promo code">
+                                </div>
+                                <button class="cart__promocode-button">Apply</button>
+                            </div>
+                            <div class="cart__button">
+                                Go to Checkout
+                                <span class="icon-slide-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container">
+                    <h2 class="subscribe__title">
+                        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                    </h2>
+                    <form action="action__page.php" class="subscribe__form">
+                        <div class="subscribe__form-input">
+                            <label for="subscribe__form-input--bar" class="subscribe__form-input--label">
+                                <span class="icon-email"></span>
+                            </label>
+                            <input placeholder="Enter your email address" type="email"
+                                class="subscribe__form-input--bar" name="subscribe__form-input--bar"
+                                id="subscribe__form-input--bar" required>
+                        </div>
+                        <button type="submit" class="subscribe__form-button">Subscribe to Newsletter</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="index.html" class="footer__logo logo">SHOP.CO</a>
+                        <p class="footer__text">We have clothes that suits your style and which you’re proud to wear.
+                            From women to men.</p>
+                        <ul class="footer__socials-list">
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-git"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Company</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">About</a></li>
+                                <li><a href="#" class="footer__block-link">Features</a></li>
+                                <li><a href="#" class="footer__block-link">Works</a></li>
+                                <li><a href="#" class="footer__block-link">Career</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Help</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Customer Support</a></li>
+                                <li><a href="#" class="footer__block-link">Delivery Details</a></li>
+                                <li><a href="#" class="footer__block-link">Terms & Conditions</a></li>
+                                <li><a href="#" class="footer__block-link">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">FAQ</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Account</a></li>
+                                <li><a href="#" class="footer__block-link">Manage Deliveries</a></li>
+                                <li><a href="#" class="footer__block-link">Orders</a></li>
+                                <li><a href="#" class="footer__block-link">Payments</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Resources</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Free eBooks</a></li>
+                                <li><a href="#" class="footer__block-link">Development Tutorial</a></li>
+                                <li><a href="#" class="footer__block-link">How to - Blog</a></li>
+                                <li><a href="#" class="footer__block-link">Youtube Playlist</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">Shop.co © 2000-2023, All Rights Reserved</p>
+                    <ul class="footer__payments-list">
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/visa.svg" alt="Visa">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/mastercard.svg" alt="MasterCard">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/paypal.svg" alt="PayPal">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/applepay.svg" alt="ApplePay">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/gpay.svg" alt="GooglePay">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

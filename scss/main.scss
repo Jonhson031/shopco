@@ -1,0 +1,378 @@
+@font-face {
+    font-family: "Integral CF";
+    src: url(../font/IntegralCFBold.otf), url(../font/IntegralCFBold.ttf), url(../font/IntegralCFBold.woff), url(../font/IntegrslCFBold.woff2);
+}
+
+@import url(../font/font-icons/style.css);
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Satoshi', "Integral CF", sans-serif;
+    color: rgba(0, 0, 0, 0.60);
+    background-color: #fff;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+.wrapper main {
+    flex-grow: 1;
+}
+
+[class*="__container"] {
+    box-sizing: border-box;
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.overlay {
+    display: none;
+    opacity: 0;
+    transition: all 0.2s;
+
+    &.active {
+        position: fixed;
+        opacity: 1;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.20);
+    }
+}
+
+.logo {
+    color: #000;
+    font-family: "Integral CF";
+    font-size: clamp(1.575rem, 1.4272rem + 0.7391vw, 2rem);
+    font-weight: 700;
+}
+
+.navigation {
+    margin-top: 1.5em;
+
+    &__container {
+        display: flex;
+        gap: 0.75em;
+    }
+
+    // .navigation__link
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-weight: 400;
+        transition: color 0.2s;
+        &:hover{
+            color: #000;
+        }
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1rem;
+            height: 1rem;
+            font-size: 0.45em;
+            color: rgba(0, 0, 0, 0.60);
+            margin-left: 0.25rem;
+            transform: rotate(-90deg);
+        }
+    }
+
+    // .navigation__link-active
+
+    &__link-active {
+        color: #000;
+
+    }
+}
+
+
+.shop {
+    // .shop__container
+
+    &__container {
+
+        font-size: 1rem;
+
+    }
+
+    // .shop__title
+
+    &__title {
+        color: #000;
+        text-align: center;
+        font-family: "Integral CF";
+        font-size: clamp(2rem, 1.6522rem + 1.7391vw, 3rem);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        margin-top: 3.44em;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    // .shop__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.52em;
+        flex: 0 1 24%;
+
+    }
+
+    // .shop__item-image
+
+    &__item-image {
+        background-color: #F0EEED;
+        border-radius: 1.25em;
+        margin-bottom: 0.5em;
+
+        & img {
+            max-width: 100%;
+            border-radius: 1.25rem;
+
+        }
+    }
+
+    // .shop__item-title
+
+    &__item-title {
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+        font-weight: 700;
+    }
+
+    // .shop__item-reviews
+
+    &__item-reviews {
+        & span {
+            color: #000;
+            font-family: Satoshi;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-left: 0.13rem;
+        }
+    }
+
+    &__item-stars {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+
+    // .shop__item-price
+
+    &__item-price {
+        position: relative;
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(1.25rem, 1.163rem + 0.4348vw, 1.5rem);
+        font-weight: 700;
+        margin-top: auto;
+    }
+
+    &__item-price--original {
+        color: rgba(0, 0, 0, 0.40);
+        margin-right: 0.62rem;
+        margin-left: 0.62rem;
+    }
+
+    &__item-price--clearance {
+        position: absolute;
+        color: #F33;
+        font-size: 0.75rem;
+        font-weight: 500;
+        border-radius: 3.875rem;
+        background: rgba(255, 51, 51, 0.15);
+        padding: 0.50rem 0.88rem;
+    }
+
+    &__button {
+        display: block;
+        color: #000;
+        font-family: Satoshi;
+        font-size: 1em;
+        font-weight: 500;
+        border-radius: 3.875rem;
+        border: 1px solid rgba(0, 0, 0, 0.20);
+        padding: 1rem 0;
+        margin: 0 auto;
+        width: 13.625rem;
+        text-align: center;
+        transition: all 0.1s;
+        margin-top: 2.25em;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.10);
+            border: 1px solid rgba(0, 0, 0, 0.30);
+        }
+    }
+}
+
+.subscribe {
+    margin-bottom: 3.12rem;
+    // .subscribe__container
+
+    &__container {
+        border-radius: 1.25rem;
+        background-color: #000;
+        padding: 2.25rem clamp(1.5rem, 0.6304rem + 4.3478vw, 4rem);
+        ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .subscribe__title
+
+    &__title {
+        color: #FFF;
+        font-family: "Integral CF";
+        font-size: clamp(2rem, 1.8261rem + 0.8696vw, 2.5rem);
+        font-weight: 700;
+        line-height: 112.5%;
+        flex: 0 1 34.4375rem;
+    }
+
+    // .subscribe__form
+
+    &__form {
+        flex: 0 1 21.8125rem;
+    }
+
+    // .subscribe__form-input
+
+    &__form-input,
+    &__form-button {
+        border-radius: 3.875rem;
+        background-color: #FFF;
+        padding: 0.75rem 0;
+        width: 100%;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-family: Satoshi;
+    }
+
+    &__form-input {
+        display: flex;
+        align-items: center;
+    }
+
+    // .subscribe__form-input--label
+
+    &__form-input--label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5em;
+        margin-left: 1rem;
+        color: rgba(0, 0, 0, 0.40);
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    // .subscribe__form-input--bar
+
+    &__form-input--bar {
+        border: none;
+        outline: none;
+        width: 80%;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.40);
+            font-family: Satoshi;
+            font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+            font-weight: 400;
+        }
+    }
+
+    // .subscribe__form-button
+
+    &__form-button {
+        margin-top: 0.88rem;
+        color: #000;
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+
+@media(max-width: 767px) {
+    .shop {
+        &__list {
+
+            & li:nth-child(3),
+            & li:nth-child(4) {
+                display: none;
+            }
+        }
+
+        &__item {
+            gap: 0.30em;
+            flex: 1 1 48%;
+        }
+
+        &__button {
+            width: 100%;
+        }
+
+        &__item-price--clearance {
+            font-size: 0.625rem;
+            padding: 0.38rem 0.60rem;
+        }
+    }
+
+    .subscribe {
+        margin-bottom: 2rem;
+
+        &__container {
+            padding-top: 2rem;
+            padding-bottom: 1.75rem;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 0 15px;
+        }
+
+        &__title {
+            line-height: 109.375%;
+            flex: initial;
+        }
+
+        &__form {
+            flex: initial;
+            width: 100%;
+        }
+
+        &__form-input,
+        &__form-button {
+            width: 100%;
+        }
+    }
+}
+
+@import './reset';
+@import './header';
+@import './home';
+@import './reviews';
+@import './footer';
+@import './product-01';
+@import './cart';
+@import './casuall';

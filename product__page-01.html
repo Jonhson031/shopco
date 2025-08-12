@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Shop.co</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper product-page">
+        <div class="overlay"></div>
+        <div class="overlay-modal hidden"></div>
+        <header class="header">
+            <p class="sign-up">Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+            <div class="header__container">
+                <div class="header__burger burger"><span></span></div>
+                <a href="index.html" class="header__logo logo">SHOP.CO</a>
+                <nav class="header__navigation">
+                    <ul class="header__list">
+                        <li class="header__dropdown-menu dropdown__menu">
+                            <a href="#" class="header__link header__dropdown-open dropdown__open">
+                                Shop
+                                <img class="header__link-arrow" src="images/icons/arrow-down.svg" alt="arrow-down">
+                            </a>
+                            <div class="header__dropdown dropdown">
+                                <a href="#" class="header__link header__dropdown-link dropdown__link">Men</a>
+                                <a href="#" class="header__link header__dropdown-link dropdown__link">Women</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="header__link">On Sale</a></li>
+                        <li><a href="#" class="header__link">New Arrivals</a></li>
+                        <li><a href="#" class="header__link">Brands</a></li>
+                        <div class="header__close">
+                            <img src="images/icons/close.svg" alt="close button">
+                        </div>
+                    </ul>
+                    <form action="submit" class="header__search" id="header__search">
+                        <button class="header__search-icon icon-search1"></button>
+                        <input class="header__search-input" placeholder="Search for products..."
+                            name="header__search-input" id="header__search-input" required></input>
+                    </form>
+                    <div class="header__buttons">
+                        <a href="cart.html" class="header__cart icon-cart">
+                            <span class="cart__btn-counter hidden">1</span>
+                        </a>
+                        <a href="#" class="header__user icon-user"></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <nav class="navigation">
+            <div class="navigation__container">
+                <a href="index.html" class="navigation__link">
+                    Home
+                    <span class="icon-arrow-down"></span>
+                </a>
+                <a href="#" class="navigation__link">
+                    Shop
+                    <span class="icon-arrow-down"></span>
+                </a>
+                <a href="#" class="navigation__link">
+                    Men
+                    <span class="icon-arrow-down"></span>
+                </a>
+                <a href="#" class="navigation__link navigation__link-active">
+                    T-shirts
+                    <span class="icon-arrow-down"></span>
+                </a>
+            </div>
+        </nav>
+        <main class="page">
+            <section class="product" data-id="product-01">
+                <div class="product__container" >
+                    <div class="product__images">
+                        <div class="product__images-small">
+                            <div class="product__image product__image-01 product__image-active">
+                                <img src="images/product-page/01.jpg" alt="One Life Graphic T-shirt Front Side">
+                            </div>
+                            <div class="product__image product__image-02">
+                                <img src="images/product-page/02.jpg" alt="One Life Graphic T-shirt Back Side">
+                            </div>
+                            <div class="product__image product__image-03">
+                                <img src="images/product-page/03.jpg" alt="One Life Graphic T-shirt On Man">
+                            </div>
+                        </div>
+                        <div class="product__image product__image-main">
+                            <img src="images/product-page/main.jpg" alt="Big Image">
+                        </div>
+                    </div>
+                    <div class="product__info">
+                        <h1 class="product__title shop__item-title">One Life Graphic T-Shirt</h1>
+                        <div class="product__rating shop__item-reviews">
+                            <div class="product__stars shop__item-stars">
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-half-star"></span>
+                            </div>
+                            <span>4.5/5</span>
+                        </div>
+                        <div class="product__price shop__item-price">
+                            <span class="product__price-main">$216</span>
+                            <span class="product__price-original shop__item-price--original">$300</span>
+                            <span class="product__clearance shop__item-price--clearance">-40%</span>
+                        </div>
+                        <p class="product__description">
+                            This graphic t-shirt which is perfect for any occasion.
+                            Crafted from a soft and breathable fabric, it offers superior comfort and style.
+                        </p>
+                        <div class="product__color">
+                            <h3 class="product__color-title">Select Colors</h3>
+                            <ul class="product__color-list">
+                                <li class="product__color-item product__color-item--active">
+                                    <img src="images/icons/white__check.svg" alt="white check">
+                                    <p>Green</p>
+                                </li>
+                                <li class="product__color-item">
+                                    <p>Blue</p>
+                                <li class="product__color-item">
+                                    <p>Purple</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product__size">
+                            <h3 class="product__size-title">Choose Size</h3>
+                            <ul class="product__size-list">
+                                <li class="product__size-item">Small</li>
+                                <li class="product__size-item">Medium</li>
+                                <li class="product__size-item product__size-item--active">Large</li>
+                                <li class="product__size-item">X-Large</li>
+                            </ul>
+                        </div>
+                        <div class="product__cart">
+                            <div class="product__cart-quantity">
+                                <div class="product__cart-substract" data-action="remove"></div>
+                                <div class="product__cart-total" data-counter>1</div>
+                                <div class="product__cart-add" data-action="add"></div>
+                            </div>
+                            <button class="product__cart-button" data-cart>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="tabs">
+                <div class="tabs__container">
+                    <button class="tabs__button">Product Details</button>
+                    <button class="tabs__button active">Rating & Reviews</button>
+                    <button class="tabs__button">FAQs</button>
+                </div>
+            </section>
+            <section class="product-details tabs__content">
+                <div class="product-details__container">
+                    <h2 class="product-details__title tabs__title">About product</h2>
+                    <p class="product-details__text product__description">This graphic t-shirt which is perfect for any
+                        occasion. Crafted
+                        from a soft and breathable fabric, it offers superior comfort and style.</p>
+                </div>
+            </section>
+            <section class="product-reviews tabs__content active reviews">
+                <div class="product-reviews__container reviews__container">
+                    <div class="product-reviews__top reviews__top">
+                        <h2 class="product-reviews__title reviews__title tabs__title">
+                            All Reviews
+                            <span>(451)</span>
+                        </h2>
+                        <div class="product-reviews__filter">
+                            <button class="product-reviews__filter-button icon-filter"></button>
+                            <div class="product-reviews__filter-sort">
+                                <select class="product-reviews__filter-list">
+                                    <option class="product-reviews__filter-item active" value="Latest">Latest</option>
+                                    <option class="product-reviews__filter-item" value="Highest">Highest</option>
+                                    <option class="product-reviews__filter-item" value="Lowest">Lowest</option>
+                                </select>
+                                <div class="product-reviews__filter-arrow">
+                                    <img src="images/icons/arrow-down.svg" alt="arrow-down">
+                                </div>
+                            </div>
+                            <button type="button" class="product-reviews__button-black show-modal">Write a
+                                Review</button>
+                        </div>
+                    </div>
+                    <ul class="product-reviews__list">
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-half-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Samantha D. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "I absolutely love this t-shirt! The design is unique and the fabric feels so
+                                comfortable. As a fellow designer, I appreciate the attention to detail. It's become
+                                my favorite go-to shirt."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 14, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Alex M. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "The t-shirt exceeded my expectations! The colors are vibrant and the print quality
+                                is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and
+                                this t-shirt definitely gets a thumbs up from me."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 15, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-half-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Ethan R. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic
+                                yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's
+                                touch in every aspect of this shirt."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 16, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Olivia P. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only
+                                represents those principles but also feels great to wear. It's evident that the designer
+                                poured their creativity into making this t-shirt stand out."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 17, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Liam K. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design
+                                speaks volumes about the designer's skill. It's like wearing a piece of art that
+                                reflects my passion for both design and fashion."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 18, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Ava H. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate
+                                details and thoughtful layout of the design make this shirt a conversation starter."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 19, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block hidden">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-half-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Ethan R. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic
+                                yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's
+                                touch in every aspect of this shirt."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 16, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block hidden">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Olivia P. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only
+                                represents those principles but also feels great to wear. It's evident that the designer
+                                poured their creativity into making this t-shirt stand out."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 17, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block hidden">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Liam K. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design
+                                speaks volumes about the designer's skill. It's like wearing a piece of art that
+                                reflects my passion for both design and fashion."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 18, 2023</div>
+                        </li>
+                        <li class="product-reviews__block reviews__block hidden">
+                            <div class="product-reviews__rate">
+                                <div class="product-reviews__stars reviews__stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <button class="product-reviews__rate-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <h3 class="product-reviews__name reviews__name">Ava H. <span
+                                    class="icon-green-arrow"></span></h3>
+                            <p class="product-reviews__text reviews__text">
+                                "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate
+                                details and thoughtful layout of the design make this shirt a conversation starter."
+                            </p>
+                            <div class="product-reviews__date">Posted on August 19, 2023</div>
+                        </li>
+                    </ul>
+                    <div class="product-reviews__button shop__button">Load More Reviews</div>
+                </div>
+                <div class="product-reviews__modal modal hidden">
+                    <button class="modal__close">
+                        <img src="images/icons/close.svg" alt="close">
+                    </button>
+                    <h2 class="modal__title">Write a Review</h2>
+                    <form action="">
+                        <fieldset class="modal__rating">
+                            <legend class="modal__label">Overall rating</legend>
+                            <div class="modal__rating-stars">
+                                <span class="icon-star" id="rating-1"></span>
+                                <span class="icon-star" id="rating-2"></span>
+                                <span class="icon-star" id="rating-3"></span>
+                                <span class="icon-star" id="rating-4"></span>
+                                <span class="icon-star" id="rating-5"></span>
+                            </div>
+                        </fieldset>
+                        <div class="modal__text">
+                            <label class="modal__label" for="modal__review-text">Your Review</label>
+                            <textarea name="modal__review-text" id="modal__review-text"></textarea>
+                        </div>
+                        <div class="modal__text">
+                            <label class="modal__label" for="modal__review-title">Review Title</label>
+                            <textarea name="modal__review-title" id="modal__review-title"></textarea>
+                        </div>
+                        <fieldset class="modal__radio">
+                            <legend class="modal__label">How did this product fit?</legend>
+                            <div class="modal__radio-group">
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="run-small" name="fit-value" value="run-small">
+                                    <label for="run-small">Runs Small</label>
+                                </div>
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="run-true-size" name="fit-value" value="run-true-size">
+                                    <label for="run-true-size">True To Size</label>
+                                </div>
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="run-big" name="fit-value" value="run-big">
+                                    <label for="run-big">Runs Big</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__radio">
+                            <legend class="modal__label">How comfortable was this product?</legend>
+                            <div class="modal__radio-group">
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="fit-uncomfortable" name="comfortable-level"
+                                        value="fit-uncomfortable">
+                                    <label for="fit-uncomfortable">Uncomfortable</label>
+                                </div>
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="fit-average" name="comfortable-level" value="fit-average">
+                                    <label for="fit-average">Average</label>
+                                </div>
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="fit-comfortable" name="comfortable-level"
+                                        value="fit-comfortable">
+                                    <label for="fit-comfortable">Very Comfortable</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="modal__radio">
+                            <legend class="modal__label">Would you recommend this product? </legend>
+                            <div class="modal__radio-group">
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="recommend-yes" name="recommend" value="recommend-yes">
+                                    <label for="recommend-yes">Yes</label>
+                                </div>
+                                <div class="modal__radio-item">
+                                    <input type="radio" id="recommend-no" name="recommend" value="recommend-no">
+                                    <label for="recommend-no">No</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="modal__policy">
+                            <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
+                            <label for="privacy-policy">
+                                By ticking the checkbox, I agree to the Privacy Policy, Terms of Use, and Terms of
+                                Service and I acknowledge that my review may be used for marketing purposes by Nike or
+                                its partners. I understand that my rating and review may appear publicly, that it may be
+                                badged as “Verified Purchaser,” and that my data may appear with my public review. I
+                                understand that ratings and reviews submitted by individuals who receive product for
+                                free or reviewed as part of a prize draw/giveaway or in exchange for a discount will be
+                                badged accordingly. I also understand that ratings and reviews submitted by Nike
+                                employees, contracted athletes, or influencers who receive product for free will be
+                                badged accordingly. *
+                            </label>
+                        </div>
+                        <button type="submit" class="modal__button product-reviews__button-black">Submit</button>
+                    </form>
+                </div>
+            </section>
+            <section class="product-faqs tabs__content">
+                <div class="product-faqs__container">
+                    <h2 class="product-faqs__title tabs__title">Frequently Asked Questions</h2>
+                    <p class="product-faqs__text product__description">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dicta sequi ipsa deleniti facilis porro culpa delectus nihil aperiam minima
+                        fuga sit eos voluptatum aliquam incidunt, odio necessitatibus nostrum ducimus asperiores.</p>
+                </div>
+            </section>
+            <section class="suggestion">
+                <div class="suggestion__container shop__container">
+                    <h2 class="suggestion__title shop__title">You might also like</h2>
+                    <ul class="suggestion__list shop__list">
+                        <li class="suggestion__item shop__item">
+                            <a class="shop__item-image" href="#"><img src="images/items/suggestion/01.jpg"
+                                    alt="Polo with Contrast Trimst"></a>
+                            <h3 class="shop__item-title">Polo with Contrast Trimst</h3>
+                            <div class="shop__item-reviews">
+                                <div class="shop__item-stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <span>4.0/5</span>
+                            </div>
+                            <div class="shop__item-price">$212 <span class="shop__item-price--original">$242</span>
+                                <span class="shop__item-price--clearance">-20%</span>
+                            </div>
+                        </li>
+                        <li class="suggestion__item shop__item">
+                            <a class="shop__item-image" href="#"><img src="images/items/suggestion/02.jpg"
+                                    alt="Gradient Graphic T-shirt"></a>
+                            <h3 class="shop__item-title">Gradient Graphic T-shirt</h3>
+                            <div class="shop__item-reviews">
+                                <div class="shop__item-stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-half-star"></span>
+                                </div>
+                                <span>3.5/5</span>
+                            </div>
+                            <div class="shop__item-price">$145</div>
+                        </li>
+                        <li class="suggestion__item shop__item">
+                            <a class="shop__item-image" href="#"><img src="images/items/suggestion/03.jpg"
+                                    alt="Polo with Tipping Details"></a>
+                            <h3 class="shop__item-title">Polo with Tipping Details</h3>
+                            <div class="shop__item-reviews">
+                                <div class="shop__item-stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-half-star"></span>
+                                </div>
+                                <span>4.5/5</span>
+                            </div>
+                            <div class="shop__item-price">$180</div>
+                        </li>
+                        <li class="suggestion__item shop__item">
+                            <a class="shop__item-image" href="#"><img src="images/items/suggestion/04.jpg"
+                                    alt="Black Striped T-shirt"></a>
+                            <h3 class="shop__item-title">Black Striped T-shirt</h3>
+                            <div class="shop__item-reviews">
+                                <div class="shop__item-stars">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <span>5/5</span>
+                            </div>
+                            <div class="shop__item-price">$120 <span class="shop__item-price--original">$150</span>
+                                <span class="shop__item-price--clearance">-30$</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container">
+                    <h2 class="subscribe__title">
+                        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                    </h2>
+                    <form action="action__page.php" class="subscribe__form">
+                        <div class="subscribe__form-input">
+                            <label for="subscribe__form-input--bar" class="subscribe__form-input--label">
+                                <span class="icon-email"></span>
+                            </label>
+                            <input placeholder="Enter your email address" type="email"
+                                class="subscribe__form-input--bar" name="subscribe__form-input--bar"
+                                id="subscribe__form-input--bar" required>
+                        </div>
+                        <button type="submit" class="subscribe__form-button">Subscribe to Newsletter</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="index.html" class="footer__logo logo">SHOP.CO</a>
+                        <p class="footer__text">We have clothes that suits your style and which you’re proud to wear.
+                            From women to men.</p>
+                        <ul class="footer__socials-list">
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__socials-link">
+                                    <span class="icon-git"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Company</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">About</a></li>
+                                <li><a href="#" class="footer__block-link">Features</a></li>
+                                <li><a href="#" class="footer__block-link">Works</a></li>
+                                <li><a href="#" class="footer__block-link">Career</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Help</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Customer Support</a></li>
+                                <li><a href="#" class="footer__block-link">Delivery Details</a></li>
+                                <li><a href="#" class="footer__block-link">Terms & Conditions</a></li>
+                                <li><a href="#" class="footer__block-link">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">FAQ</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Account</a></li>
+                                <li><a href="#" class="footer__block-link">Manage Deliveries</a></li>
+                                <li><a href="#" class="footer__block-link">Orders</a></li>
+                                <li><a href="#" class="footer__block-link">Payments</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__block">
+                            <h3 class="footer__block-title">Resources</h3>
+                            <ul class="footer__block-list">
+                                <li><a href="#" class="footer__block-link">Free eBooks</a></li>
+                                <li><a href="#" class="footer__block-link">Development Tutorial</a></li>
+                                <li><a href="#" class="footer__block-link">How to - Blog</a></li>
+                                <li><a href="#" class="footer__block-link">Youtube Playlist</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">Shop.co © 2000-2023, All Rights Reserved</p>
+                    <ul class="footer__payments-list">
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/visa.svg" alt="Visa">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/mastercard.svg" alt="MasterCard">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/paypal.svg" alt="PayPal">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/applepay.svg" alt="ApplePay">
+                        </li>
+                        <li class="footer__payments-item">
+                            <img src="images/icons/payments/gpay.svg" alt="GooglePay">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/cart.js"></script>
+</body>
+
+</html>

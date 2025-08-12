@@ -1,0 +1,96 @@
+.reviews {
+    margin-bottom: 5em;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 2.5em;
+    }
+
+    // .reviews__title
+
+    &__title {
+        color: #000;
+        font-family: "Integral CF";
+        font-size: clamp(2rem, 1.6522rem + 1.7391vw, 3rem);
+        font-weight: 700;
+    }
+
+    // .reviews__arrows
+
+    &__arrows {
+        display: flex;
+        align-items: end;
+        gap: 1em;
+        cursor: pointer;
+    }
+
+    // .reviews__arrow-right
+
+    &__arrow-right {
+        transform: rotate(180deg);
+    }
+
+    // .reviews__block
+
+    &__block {
+        border-radius: 1.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        padding: 2rem 1.75rem;
+        box-sizing: border-box;
+    }
+
+    // .reviews__stars
+
+    &__stars {
+        display: flex;
+        gap: 0.41em;
+    }
+
+    // .reviews__name
+
+    &__name {
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+        font-weight: 700;
+        line-height: 110%;
+        margin-top: 1.22em;
+        margin-bottom: 1.03em;
+        display: flex;
+        align-items: center;
+        & span{
+            
+            margin-left: 0.35rem;
+        }
+    }
+
+    // .reviews__text
+
+    &__text {
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-weight: 400;
+        line-height: 137.5%;
+        height: 6.875em;
+        max-width: 21em;
+    }
+
+    @media(max-width: 767px) {
+        &__block{
+            padding: 1.5em;
+        }
+        &__name {
+            margin-top: 0.97em;
+            margin-bottom: 0.72em;
+        }
+
+    }
+}
+

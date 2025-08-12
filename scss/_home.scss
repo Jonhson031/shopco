@@ -1,0 +1,368 @@
+.hero {
+    position: relative;
+    z-index: 1;
+    // .hero__container
+
+    &__container {
+        display: flex;
+        font-size: 1rem;
+        justify-content: space-between;
+
+        padding-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    // .hero__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex: 0 1 48%;
+        /* 596/1240 */
+        padding-top: 3em;
+    }
+
+    // .hero__title
+
+    &__title {
+        color: #000;
+        font-family: "Integral CF";
+        font-size: 4em;
+        font-size: clamp(2.25rem, 1.6413rem + 3.0435vw, 4rem);
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    // .hero__subtitle
+
+    &__subtitle {
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Satoshi;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 137.5%;
+    }
+
+    // .hero__button
+
+    &__button {
+        display: block;
+        font-family: Satoshi;
+        max-width: 13.125rem;
+        text-align: center;
+        color: #FFF;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 1em 0;
+        border-radius: 3.875rem;
+        background-color: #000;
+    }
+
+    // .hero__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1rem;
+        gap: 0.5em;
+    }
+
+    // .hero__item
+
+    &__item {
+        color: #000;
+        font-family: Satoshi;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        & span {
+            display: block;
+            color: rgba(0, 0, 0, 0.60);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 137.5%;
+            margin-top: 3px;
+        }
+    }
+
+    // .hero__decor
+
+    &__decor {
+        position: relative;
+        flex: 0 1 49%;
+
+        & img {
+            max-width: 100%
+        }
+
+        ;
+    }
+
+    // .hero__image
+
+    &__image {
+        max-height: 38em;
+        max-width: 100%;
+        right: 0;
+    }
+
+    &__decor-star {
+        position: absolute;
+
+    }
+
+    &__decor-star--small {
+        height: 3.5em;
+        width: 3.5em;
+        left: 0;
+        top: 40%;
+    }
+
+    &__decor-star--big {
+        top: 7.5%;
+        right: 0;
+    }
+}
+
+.brands {
+    margin-bottom: 4.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+    margin-top: -3px;
+    overflow: hidden;
+    padding: 2.62rem 0;
+    text-align: center;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 1.25em;
+    }
+
+    &__item {
+        & img {
+            max-width: 100%;
+        }
+    }
+}
+
+.arrivals {
+    margin-bottom: 8rem;
+}
+
+.sellers {
+    margin-bottom: 5rem;
+}
+
+.style {
+    margin-bottom: 9.75rem;
+    // .style__container
+
+    &__container {
+        padding: 0 4rem;
+    }
+
+    &__title {
+        color: #000;
+        text-align: center;
+        font-family: "Integral CF";
+        font-size: clamp(2rem, 1.6522rem + 1.7391vw, 3rem);
+        font-weight: 700;
+        margin-bottom: 4rem;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+
+        & div:nth-child(1) {
+            flex: 0 1 35.64%;
+            justify-self: end;
+        }
+
+        & div:nth-child(2) {
+            flex: 0 1 59.90%;
+        }
+
+        & div:nth-child(3) {
+            flex: 0 1 59.90%;
+        }
+
+        & div:nth-child(4) {
+            flex: 0 1 35.64%
+        }
+    }
+
+    // .style__block
+
+    &__block {
+        background-color: #fff;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        transition: transform 0.3s;
+        &:hover{
+            transform: scale(1.05)
+        }
+    }
+
+    // .style__title
+
+    &__block-title {
+        position: absolute;
+        left: 2.25rem;
+        top: 1.56rem;
+        color: #000;
+        font-family: Satoshi;
+        font-size: clamp(1.5rem, 1.2391rem + 1.3043vw, 2.25rem);
+        font-weight: 700;
+    }
+
+    // .style__img
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+
+
+@media(max-width: 1023px) {
+    .hero {
+        &__container {
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        &__content {
+            flex: 0 1 100%;
+        }
+
+        &__button {
+            max-width: 50%;
+        }
+
+        &__image {
+            max-height: 38em;
+        }
+
+        &__decor {
+            flex: 0 1 100%;
+            text-align: center;
+        }
+    }
+
+    .style {
+        margin-bottom: 6.81rem;
+
+        &__container {
+            padding: 0 1.5rem;
+        }
+
+        &__blocks {
+            flex-direction: column;
+        }
+
+        &__block {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .hero {
+        &__container {
+            gap: 2em;
+            padding-top: 2.5em;
+        }
+
+        &__content {
+            gap: 1.25rem;
+            padding-top: 0;
+        }
+
+        &__title {
+            line-height: 94.44%;
+        }
+
+        &__subtitle {
+            font-size: 0.875em;
+            line-height: 142.857%;
+        }
+
+        &__list {
+            row-gap: 0.75em;
+            column-gap: 3.44em;
+            max-width: 17.375em;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        &__button {
+            max-width: 100%;
+            margin-top: 0.25em;
+            margin-bottom: 0.17em;
+        }
+
+        &__item {
+            font-size: 1.5em;
+
+            & span {
+                font-size: 0.75rem;
+                line-height: 183.333%;
+                margin-top: -0.37em;
+            }
+        }
+
+        &__decor-star--small {
+            height: 2.75em;
+            width: 2.75em;
+        }
+
+        &__decor-star--big {
+            height: 4.75em;
+            width: 4.75em;
+        }
+    }
+
+    .brands {
+        &__list {
+            justify-content: center;
+        }
+
+        &__item {
+            flex: 1 1 33.3%;
+
+            & img {
+                max-width: 75%;
+            }
+        }
+    }
+
+
+    .style {
+        &__block {
+            max-height: 11.875rem;
+
+            & a {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        &__block-title {
+
+            left: 1.5rem;
+            top: 1rem;
+        }
+    }
+
+}

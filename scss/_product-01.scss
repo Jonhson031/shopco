@@ -3,6 +3,7 @@ body {
         overflow: hidden;
     }
 }
+
 .suggestion {
     margin-bottom: 4.87em;
     margin-top: 4em;
@@ -21,9 +22,11 @@ body {
     background-color: rgba(0, 0, 0, 0.60);
     transition: all 0.2s;
 }
-.product-page > .header > .header__container{
+
+.product-page>.header>.header__container {
     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.10);
 }
+
 .product {
     margin-top: 2.25em;
     // .product__container
@@ -56,12 +59,14 @@ body {
     // .product__image
     &__image {
         cursor: pointer;
-    }
-
-    &__image-active {
-        & img {
-            border-radius: 1.25rem;
-            border: 1px solid #000;
+        & img{
+            box-sizing: border-box;
+        }
+        &.active{
+            & img {
+                border-radius: 1.25rem;
+                border: 1px solid #000;
+            }
         }
     }
 
@@ -70,6 +75,11 @@ body {
     &__image-main {
         height: 100%;
         background-color: #F0EEED;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     // .product__info
@@ -143,7 +153,7 @@ body {
         display: flex;
         align-items: center;
         gap: 1em;
-        
+
         & li:nth-child(1) {
             background-color: #4F4631;
         }
@@ -160,9 +170,10 @@ body {
     // .product__color-item
 
     &__color-item {
-        & p{
+        & p {
             display: none;
         }
+
         width: 2.3125rem;
         height: 2.3125rem;
         border-radius: 50%;
@@ -171,9 +182,10 @@ body {
         align-items: center;
         cursor: pointer;
 
-        & img {
-            width: 1rem;
-            height: 1rem;
+        &.active {
+            background-image: url('../images/icons/white__check.svg');
+            background-repeat: no-repeat;
+            background-position: 50%;
         }
     }
 
@@ -208,12 +220,14 @@ body {
         font-weight: 400;
         border-radius: 3.875em;
         cursor: pointer;
+        transition: all 0.2s;
+
+        &.active {
+            background-color: #000;
+            color: #fff;
+        }
     }
 
-    &__size-item--active {
-        background-color: #000;
-        color: #fff;
-    }
 
 
 
@@ -296,6 +310,7 @@ body {
         background-color: #000;
         border-radius: 3.875rem;
         box-sizing: border-box;
+        cursor: pointer;
     }
 
 
@@ -347,13 +362,14 @@ body {
     // .reviews__filter-sort
 
     &__filter-sort {
-      
+
         position: relative;
         border-radius: 3.875rem;
         background: #F0F0F0;
         display: flex;
         align-items: center;
         cursor: pointer;
+
         & img {
             transition: 0.2s;
             z-index: 2;
@@ -413,7 +429,8 @@ body {
         width: initial;
         flex: 0 1 48%;
         box-sizing: border-box;
-        &.hidden{
+
+        &.hidden {
             display: none;
         }
     }
@@ -552,6 +569,7 @@ body {
     overflow: auto;
     // .modal__close
     transition: all 0.5s;
+
     &__close {
         display: block;
         position: absolute;
@@ -594,9 +612,8 @@ body {
                 transition: all 0.2s;
             }
 
-            &:hover::before {
+            &.active::before {
                 color: #ffc633;
-
             }
         }
     }
@@ -628,6 +645,7 @@ body {
             border-radius: 1em;
             font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
             color: #000;
+            box-sizing: border-box;
         }
     }
 
@@ -672,9 +690,11 @@ body {
         font-family: Satoshi;
         font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
         font-weight: 500;
-        & input{
+
+        & input {
             display: block;
         }
+
         & input[type=checkbox] {
             width: 20px;
             height: 20px;
@@ -703,8 +723,20 @@ body {
         &__description {
             max-width: 40em;
         }
+        &__images {
+            flex: 0 1 100%;
+    
+            & img {
+                width: 100%;
+    
+            }
+        }
+        &__image-main {
+            width: 100%;
+        }
     }
-    .modal{
+
+    .modal {
         width: 90%;
     }
 }
@@ -787,7 +819,7 @@ body {
         }
     }
 
-    .modal{
+    .modal {
         height: 100%;
         width: 100%;
         padding: 4.3em 1em;

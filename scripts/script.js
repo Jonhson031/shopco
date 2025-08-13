@@ -184,3 +184,52 @@ if (filter) {
    overlayFilter.addEventListener('click', removeActive);
 
 }
+
+
+// Stars Rating
+const stars = document.querySelectorAll('.modal__rating-stars span');
+stars.forEach((star, index1) => {
+   star.addEventListener("click", function () {
+
+      stars.forEach((star, index2) => {
+         index1 >= index2 ? star.classList.add('active') : star.classList.remove('active');
+      });
+   });
+});
+
+// Choose color, size of product
+const productSize = document.querySelectorAll('.product__size-item');
+if (productSize) {
+   productSize.forEach((size, index1) => {
+      size.addEventListener('click', function () {
+         productSize.forEach((size, index2) => {
+            index1 == index2 ? size.classList.add('active') : size.classList.remove('active');
+         });
+      });
+   });
+}
+const productColor = document.querySelectorAll('.product__color-item');
+if (productColor) {
+   productColor.forEach((color, index1) => {
+      color.addEventListener('click', function () {
+         productColor.forEach((color, index2) => {
+            index1 == index2 ? color.classList.add('active') : color.classList.remove('active');
+         });
+      });
+   });
+}
+
+// Changing main image
+const productImage = document.querySelectorAll('.product__image');
+const productMainImage = document.querySelector('.product__image-main img');
+if (productImage) {
+   productImage.forEach((image, index1) => {
+      image.addEventListener('click', function () {
+         let imgSource = image.querySelector('img').getAttribute('src');
+         productMainImage.setAttribute('src', imgSource);
+         productImage.forEach((image, index2) => {
+            index1 == index2 ? image.classList.add('active') : image.classList.remove('active');
+         });
+      });
+   });
+}

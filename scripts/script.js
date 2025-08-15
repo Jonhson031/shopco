@@ -108,9 +108,9 @@ if (tabs) {
    });
 }
 // Filter Sort (Reviews)
-const filterSort = document.querySelector('.product-reviews__filter-sort');
-const filterList = document.querySelector('.product-reviews__filter-list');
-const filterSortItem = document.querySelectorAll('.product-reviews__filter-item');
+const filterSort = document.querySelector('.product-reviews__filter-sort, .casual__sort');
+const filterList = document.querySelector('.product-reviews__filter-list, .casual__sort-list');
+const filterSortItem = document.querySelectorAll('.product-reviews__filter-item, .casual__sort-item');
 if (filterSort) {
    filterSort.addEventListener('click', function () {
       filterSort.classList.toggle('active');
@@ -198,7 +198,7 @@ stars.forEach((star, index1) => {
 });
 
 // Choose color, size of product
-const productSize = document.querySelectorAll('.product__size-item');
+const productSize = document.querySelectorAll('.product__size-item, .filter__size-item');
 if (productSize) {
    productSize.forEach((size, index1) => {
       size.addEventListener('click', function () {
@@ -208,7 +208,7 @@ if (productSize) {
       });
    });
 }
-const productColor = document.querySelectorAll('.product__color-item');
+const productColor = document.querySelectorAll('.product__color-item, .filter__colors-item');
 if (productColor) {
    productColor.forEach((color, index1) => {
       color.addEventListener('click', function () {
@@ -230,6 +230,23 @@ if (productImage) {
          productImage.forEach((image, index2) => {
             index1 == index2 ? image.classList.add('active') : image.classList.remove('active');
          });
+      });
+   });
+}
+
+// Hide Filter Section
+const filterHide = document.querySelectorAll('.filter__section > h3');
+const filterHidden = document.querySelectorAll('.filter__section');
+if (filterHide) {
+   filterHide.forEach((filterClick, index1) => {
+      filterClick.addEventListener('click', function() {
+         filterHidden.forEach((filterHideen, index2) => {
+            // index1 == index2 ? filterHideen.classList.toggle('clicked');
+            if (index1 == index2) {
+               filterHideen.classList.toggle('clicked');
+            }
+         });
+
       });
    });
 }

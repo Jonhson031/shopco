@@ -1407,7 +1407,6 @@ body.lock {
 .product-reviews__filter-button {
   padding: 1em 1.25em;
   font-size: clamp(1.25rem, 1.163rem + 0.4348vw, 1.5rem);
-  cursor: pointer;
   border: none;
   border-radius: 3.875rem;
   background: #F0F0F0;
@@ -2105,10 +2104,13 @@ body.lock {
      -moz-appearance: none;
           appearance: none;
   border: none;
+  box-sizing: border-box;
+  padding: 0.5em 0.1em;
   font-family: Satoshi;
   font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
   font-weight: 500;
   color: #000;
+  width: 11em;
 }
 .casual__sort-list span {
   color: rgba(0, 0, 0, 0.6);
@@ -2118,7 +2120,7 @@ body.lock {
 }
 .casual__sort-arrow {
   position: absolute;
-  right: -0.85em;
+  right: 0em;
 }
 .casual__sort-filter {
   display: none;
@@ -2203,8 +2205,7 @@ body.lock {
 
 .filter {
   padding: 1.25em 1.5em;
-  flex: 0 0 23.790323%;
-  /* 295/1240 */
+  flex: 0 0 25.726%;
   box-sizing: border-box;
   border-radius: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -2246,6 +2247,15 @@ body.lock {
 }
 .filter__close {
   display: none;
+}
+.filter__section.clicked .filter__section-hidden {
+  display: none;
+}
+.filter__section > h3 > span, .filter__section.clicked .filter__section-hidden {
+  transition: all 0.2s;
+}
+.filter__section.clicked > h3 > span {
+  transform: rotate(0deg);
 }
 .filter__clothing {
   display: grid;
@@ -2368,6 +2378,15 @@ body.lock {
   height: 2.3125rem;
   border-radius: 50%;
   border: 0.13rem solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.filter__colors-item.active {
+  background-image: url("../images/icons/white__check.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 .filter__size {
   padding: 1.5em 0;
@@ -2389,6 +2408,7 @@ body.lock {
   font-family: Satoshi;
   font-size: 0.875rem;
   font-weight: 400;
+  transition: all 0.2s;
 }
 .filter__size-item.active {
   background-color: #000;
@@ -2447,7 +2467,7 @@ body.lock {
     opacity: 1;
     height: 100%;
     width: 100%;
-    z-index: 4;
+    z-index: 7;
     background-color: rgba(0, 0, 0, 0.2);
   }
   .filter {
@@ -2461,6 +2481,7 @@ body.lock {
     height: 100%;
     margin: 0;
     padding-top: 1.6em;
+    padding-bottom: 10em;
     transition: 0.3s;
     background-color: #fff;
     box-sizing: border-box;

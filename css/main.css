@@ -347,16 +347,17 @@ textarea {
 }
 
 .sign-up {
-  display: block;
+  max-height: 35.25px;
+  width: 100%;
   background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 0.56em 0;
+  padding: 0.6em 0;
   font-family: "Satoshi";
   font-size: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
   font-weight: 400;
   line-height: 140%;
-  transition: all 0.2s;
+  overflow: hidden;
 }
 .sign-up__container {
   position: relative;
@@ -392,6 +393,9 @@ textarea {
   transform: rotate(135deg);
 }
 .sign-up.hidden {
+  top: -100%;
+  max-height: 0;
+  opacity: 0;
   display: none;
 }
 
@@ -504,7 +508,7 @@ textarea {
   width: 0;
   height: 0;
   opacity: 0;
-  transition: width 0.2s height 0.2s opacity 0.3s;
+  transition: width 0.2s ease height 0.2s ease opacity 0.3s ease;
 }
 .dropdown__link {
   display: none;
@@ -614,7 +618,7 @@ textarea {
     height: 100%;
     flex: 0 1 auto;
     padding-top: 5.34em;
-    transition: 0.3s;
+    transition: all 0.2s ease-in-out;
     flex-direction: column;
     background-color: #fff;
     border-radius: 1.25rem 1.25rem 0rem 0rem;
@@ -2248,11 +2252,19 @@ body.lock {
 .filter__close {
   display: none;
 }
+.filter__section-hidden {
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
+  overflow: hidden;
+  max-height: 300px;
+}
 .filter__section.clicked .filter__section-hidden {
-  display: none;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
 }
 .filter__section > h3 > span, .filter__section.clicked .filter__section-hidden {
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .filter__section.clicked > h3 > span {
   transform: rotate(0deg);
@@ -2482,7 +2494,7 @@ body.lock {
     margin: 0;
     padding-top: 1.6em;
     padding-bottom: 10em;
-    transition: 0.3s;
+    transition: all 0.3s;
     background-color: #fff;
     box-sizing: border-box;
     border: none;
@@ -2512,10 +2524,12 @@ body.lock {
 @media (max-width: 767px) {
   .casual__item {
     flex: 0 1 48%;
-    max-width: 10.75em;
   }
   .casual__page-counter li:nth-child(3), .casual__page-counter li:nth-child(5) {
     display: none;
+  }
+  .casual__list {
+    gap: 0.5em;
   }
   .casual__list li:last-child {
     display: none;

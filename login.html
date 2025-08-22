@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Shop.co | Login</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper login-page">
+        <div class="login__container hidden">
+            <h1 class="login__title logo"><a href="index.html">SHOP.CO LOGIN</a></h1>
+            <h2 class="login__subtitle">
+                Shop your styles, save top picks to your wishlist, track those orders & enjoy our products.
+            </h2>
+            <form action="" method="post" class="login__form">
+
+                <input class="login__form-input" name="customer__email-login" id="customer__email-login" type="email" required
+                    placeholder="Email address*">
+
+
+                <input class="login__form-input" name="customer__password-login" id="customer__password-login" type="password"
+                    required placeholder="Password*">
+
+                <a href="#" class="login__form-forget">Forgot password?</a>
+                <button class="login__form-button">LOG IN</button>
+                <p class="login__form-question">Don't have an account? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+        <div class="signup__container">
+            <h1 class="login__title logo"><a href="index.html">SHOP.CO SIGNUP</a></h1>
+            <h2 class="login__subtitle">
+                One account, across all apps, just to make things a little easier.
+            </h2>
+            <form action="" method="post" class="signup__form">
+                <input class="login__form-input" name="customer__firstname" id="customer__firstname" type="text"
+                    required placeholder="First Name">
+                <input class="login__form-input" name="customer__lastname" id="customer__lastname" type="text" required
+                    placeholder="Last Name">
+                <input class="login__form-input" name="customer__birth" id="customer__birth" type="date" required
+                    placeholder="Last Name">
+                <input class="login__form-input" name="customer__email" id="customer__email" type="email" required
+                    placeholder="Email address*">
+                <input class="login__form-input" name="customer__password" id="customer__password" type="password"
+                    required placeholder="Password*">
+                <p class="login__form-privacy">
+                    By clicking 'Create Account', you agree to our <a href="#">Privacy Policy</a> and
+                    acknowledge that you have read and understood its terms.
+                </p>
+                <button class="login__form-button">CREATE ACCOUNT</button>
+                <p class="signup__form-question">Already have an account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

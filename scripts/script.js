@@ -1,11 +1,26 @@
-'use strict';
-
+"use strict";
 // Sign Up close button
 const signupClose = document.querySelector('.sign-up__close');
 const signup = document.querySelector('.sign-up');
 if (signup) {
    signupClose.addEventListener('click', function () {
       signup.classList.toggle('hidden');
+   });
+}
+// Sign Up page
+
+const signupBtn = document.querySelector('.login__form-question');
+const loginContainer = document.querySelector('.login__container');
+const loginBtn = document.querySelector('.signup__form-question');
+const signupContainer = document.querySelector('.signup__container');
+if (signupContainer){
+   signupBtn.addEventListener('click', function () {
+      loginContainer.classList.add('hidden');
+      signupContainer.classList.remove('hidden');
+   });
+   loginBtn.addEventListener('click', function () {
+      signupContainer.classList.add('hidden');
+      loginContainer.classList.remove('hidden');
    });
 }
 
@@ -188,14 +203,16 @@ if (filter) {
 
 // Stars Rating
 const stars = document.querySelectorAll('.modal__rating-stars span');
-stars.forEach((star, index1) => {
-   star.addEventListener("click", function () {
-
-      stars.forEach((star, index2) => {
-         index1 >= index2 ? star.classList.add('active') : star.classList.remove('active');
+if (stars){
+   stars.forEach((star, index1) => {
+      star.addEventListener("click", function () {
+   
+         stars.forEach((star, index2) => {
+            index1 >= index2 ? star.classList.add('active') : star.classList.remove('active');
+         });
       });
    });
-});
+}
 
 // Choose color, size of product
 const productSize = document.querySelectorAll('.product__size-item, .filter__size-item');
@@ -239,7 +256,7 @@ const filterHide = document.querySelectorAll('.filter__section > h3');
 const filterHidden = document.querySelectorAll('.filter__section');
 if (filterHide) {
    filterHide.forEach((filterClick, index1) => {
-      filterClick.addEventListener('click', function() {
+      filterClick.addEventListener('click', function () {
          filterHidden.forEach((filterHideen, index2) => {
             // index1 == index2 ? filterHideen.classList.toggle('clicked');
             if (index1 == index2) {

@@ -618,7 +618,7 @@ textarea {
     height: 100%;
     flex: 0 1 auto;
     padding-top: 5.34em;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     flex-direction: column;
     background-color: #fff;
     border-radius: 1.25rem 1.25rem 0rem 0rem;
@@ -2529,7 +2529,7 @@ body.lock {
     display: none;
   }
   .casual__list {
-    gap: 0.5em;
+    gap: 0.87em;
   }
   .casual__list li:last-child {
     display: none;
@@ -2544,4 +2544,98 @@ body.lock {
   .casual__item {
     flex: 0 1 47%;
   }
+}
+.login-page {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.login-page .hidden {
+  display: none;
+}
+
+.login__container, .signup__container {
+  min-height: 100%;
+  max-width: 23em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.login__form, .signup__form {
+  display: grid;
+}
+.login__title, .signup__title {
+  line-height: 110%;
+}
+.login__subtitle, .login__form-input, .signup__subtitle, .signup__form-input {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Satoshi;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 137.5%;
+}
+.login__form-input, .signup__form-input {
+  position: relative;
+  z-index: 2;
+  width: 20em;
+  height: 3.25em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3em;
+  margin-bottom: 0.75em;
+  padding-left: 1em;
+  outline: none;
+  transition: all 0.2s;
+}
+.login__form-input:focus, .signup__form-input:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
+.login__form-forget, .signup__form-forget {
+  color: rgb(0, 0, 0);
+  font-family: Satoshi;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: underline;
+  margin-bottom: 1.7em;
+  margin-top: 0.5em;
+}
+.login__form-button, .signup__form-button {
+  display: block;
+  width: 20em;
+  margin: 0 auto;
+  padding: 0.8em 1em;
+  font-family: Satoshi;
+  line-height: 127%;
+  text-align: center;
+  color: #FFF;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 3.875rem;
+  background-color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.login__form-question, .login__form-privacy, .signup__form-question, .signup__form-privacy {
+  font-family: Satoshi;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1em;
+}
+.login__form-question a, .login__form-privacy a, .signup__form-question a, .signup__form-privacy a {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.login__form-privacy, .signup__form-privacy {
+  margin-bottom: 1.5em;
+  line-height: 115%;
+}
+.login__form-privacy a, .signup__form-privacy a {
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
 }

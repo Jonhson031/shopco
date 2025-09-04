@@ -1470,9 +1470,14 @@ body.lock {
   width: initial;
   flex: 0 1 48%;
   box-sizing: border-box;
+  transition: all 0.2s;
+  opacity: 1;
+  overflow: hidden;
 }
 .product-reviews__block.hidden {
-  display: none;
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
 }
 .product-reviews__rate {
   display: flex;
@@ -1894,6 +1899,9 @@ body.lock {
   gap: 1.5em;
   border-radius: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cart__summary.hidden {
+  display: none;
 }
 .cart__summary-title {
   color: #000;

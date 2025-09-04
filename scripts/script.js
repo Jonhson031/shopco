@@ -267,3 +267,12 @@ if (filterHide) {
       });
    });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+   const savedCounter = localStorage.getItem("basketCounter");
+   if (savedCounter && parseInt(savedCounter) > 0) {
+     basketCounter.innerText = savedCounter;
+     basketCounter.classList.remove("hidden");
+   }
+ });

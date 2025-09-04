@@ -59,10 +59,12 @@ body {
     // .product__image
     &__image {
         cursor: pointer;
-        & img{
+
+        & img {
             box-sizing: border-box;
         }
-        &.active{
+
+        &.active {
             & img {
                 border-radius: 1.25rem;
                 border: 1px solid #000;
@@ -75,7 +77,8 @@ body {
     &__image-main {
         height: 100%;
         background-color: #F0EEED;
-        & img{
+
+        & img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -353,7 +356,7 @@ body {
     &__filter-button {
         padding: 1em 1.25em;
         font-size: clamp(1.25rem, 1.163rem + 0.4348vw, 1.5rem);
-        
+
         border: none;
         border-radius: 3.875rem;
         background: #F0F0F0;
@@ -429,8 +432,14 @@ body {
         width: initial;
         flex: 0 1 48%;
         box-sizing: border-box;
+        transition: all 0.2s;
+        opacity: 1;
+        overflow: hidden;
+        
         &.hidden {
-            display: none;
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
         }
     }
 
@@ -722,14 +731,16 @@ body {
         &__description {
             max-width: 40em;
         }
+
         &__images {
             flex: 0 1 100%;
-    
+
             & img {
                 width: 100%;
-    
+
             }
         }
+
         &__image-main {
             width: 100%;
         }
